@@ -1,0 +1,31 @@
+<%# Home Page Video %>
+<div class="home-video-wrapper">
+  <%#= video_tag "travel.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+    <div class="content-container">
+      <h1 class="home"> The World is full of Amazing places</h1>
+      <h2 class="home"> Create and add Places now</h2>
+      <%= link_to "Add a country", root_path(anchor: "form-bottom"), class: "btn btn-danger mt-2" %>
+    </div>
+</div>
+
+<div class="content-container">
+  <div class="country-list-header">
+  <h2>List of Countries</h2>
+  <hr>
+  </div>
+
+  <%# Country cards %>
+  <%= render 'card' %>
+
+  <div class="card-hr-separator">
+  <hr>
+  </div>
+
+  <h3>Add a country</h3>
+  <div class="form-container">
+    <div id="form-bottom" class="form-style">
+      <%= render 'form', list: @list %>
+    </div>
+    <%= image_tag 'travel.png', class: 'icon' %>
+  </div>
+</div>

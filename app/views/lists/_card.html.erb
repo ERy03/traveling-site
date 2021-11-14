@@ -1,0 +1,19 @@
+<div class="card-box">
+  <% @lists.each do |list| %>
+    <% country = list.country %>
+    <% country = ISO3166::Country[country] %>
+    <div class="card-pick">
+      <img src="https://source.unsplash.com/featured/?travel,<%= country %>
+" alt="">
+        <div class="garbage"><%= link_to list_path(list), method: :delete, data: { confirm: "Are you sure?"} do %>
+          <i class="fas fa-trash-alt"></i>
+          <% end %>
+        </div>
+      <div class="card-pick-info">
+        <h2><%= country %></h2>
+        <p><%= list.comment %></p>
+        <%= link_to "", list_path(list), class: "card-category-link"  %>
+      </div>
+    </div>
+  <% end %>
+</div>

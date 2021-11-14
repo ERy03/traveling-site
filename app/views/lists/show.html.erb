@@ -1,0 +1,12 @@
+<div class="page-frame-content">
+  <div class="page-frame-header">
+    <div class="content-container">
+      <% country = @list.country %>
+      <% country = ISO3166::Country[country] %>
+        <h1><%= country %></h1>
+    </div>
+  <div class="page-frame-body"></div>
+
+  </div>
+
+</div>

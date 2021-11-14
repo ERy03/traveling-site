@@ -1,0 +1,32 @@
+// Specific CSS for your home-page
+.home_video {
+ width: 100vw;
+ height: 100vh;
+ position: absolute;
+ object-fit: cover;
+ top: 0;
+ z-index: -2;
+}
+.home-video-wrapper {
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background: rgba(1, 1, 42, 0.4);
+}
+.home {
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.country-list-header {
+  margin-top: 3rem;
+
+    hr {
+      margin-bottom: 2rem;
+    }
+}
+
+.card-hr-separator hr{
+  margin: 2rem 0;
+}

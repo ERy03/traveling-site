@@ -1,0 +1,6 @@
+<%= simple_form_for (list) do |f| %>
+  <%= f.input :country, label: 'Country Name', include_blank: 'Select a country' %>
+  <%= f.input :comment, label: 'Comment' %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit 'Add Country', class: 'btn btn-danger mt-3' %>
+<% end %>
